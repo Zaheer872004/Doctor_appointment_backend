@@ -89,8 +89,8 @@ class AppointmentController {
 
   // Get doctor's appointments for a specific date
   getDoctorAppointments = asyncHandler(async (req, res) => {
-    // const { doctorId } = req.params;
-    const doctorId = req.params.doctorId?.replace(':', '');
+    const { doctorId } = req.params;
+    // const doctorId = req.params.doctorId?.replace(':', '');
     const { date } = req.query;
 
     
