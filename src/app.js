@@ -55,7 +55,7 @@ app.use('/api/slots', slotRoutes);
 // Schedule no-show check every 5 minutes
 import appointmentService from "./services/appointment.service.js";
 import cron from 'node-cron';
-cron.schedule('*/1 * * * *', () => {
+cron.schedule('*/15 * * * *', () => {
     appointmentService.checkNoShows();
 });
 
